@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+/* color use in the page*/
+:root {
+    /* primary color*/
+    --veryDarkBlue : hsl(233, 47%, 7%);/*main background*/
+    --darkDesaturatedBlue: hsl(244, 38%, 16%); /*card background*/
+    --softViolet : hsl(277, 64%, 61%); /*accent*/
+
+    /*neutral color*/
+    --white : hsl(0, 0%, 100%); /*main heading, stats*/
+    --slightlyTransparent: hsla(0, 0%, 100%, 0.75); /*main paragraph*/
+    --slightlyTransparentWhite: hsla(0, 0%, 100%, 0.6); /*stat headings*/
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 15px;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'inter';
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--veryDarkBlue);
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: var(--darkDesaturatedBlue);
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    width: 1000px;
+    height: auto;
+}
+
+/*Styling the header of thecard */
+header {
+    background: var(--softViolet);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 0px 10px 10px 0px;
+    width: 750px;
+}
+
+img {
+    object-fit: cover;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+/*Styling the section */
+section {
+    margin: 40px 60px;
+    width: 650px;
+}
+
+h1 {
+    color: var(--white);
+}
+span {
+    color: var(--softViolet);
+}
+
+h2 {
+    color: var(--slightlyTransparent)
+}
+
+p {
+    color: var(--slightlyTransparentWhite)
+}
+
+.wrapper {
+    display: flex;
+}
+
+article {
+    margin-right: 40px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+/*Style of a the footer having the class atribution*/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/*Media query for iPads, tables*/
+@media only screen and (max-width:768px)
+ {
+    .container {
+        width: 80%;
+        display: block;
+        margin-top:150px;
+        margin-bottom: 1000px;
+    }
+    header {
+        width: 100%;
+        height: 400px;
+        border-radius: 10px 10px 0px 1px;
+    }
+    section {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .wrapper {
+        margin:0 auto;
+        display: block;
+    }
+
+}
+
+/* Media query for mobile devices*/
+@media screen and (max-width: 480px)
+{
+    .container {
+        margin-top: 100px;
+    }
+    header {
+        height: 70%;
+    }
+    img {
+        width: 100%;
+        height: 250px;
+    }
+    .wrapper {
+        margin-left: 20px;
+    }
+}
+
+
+
+
+
+
+
+
